@@ -15,8 +15,26 @@ def fizzbuzz(n: int) -> list:
     Examples:
     - fizzbuzz(15) should return ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"]
     """
-    # Implement your solution here
-    pass
+    # Implement your solution here]
+    result = []
+    i = 1
+    while i <= n:
+        if i // 3 * 3 == i and i // 5 * 5 == i:
+            result.append("FizzBuzz")
+        elif i // 3 * 3 == i:
+            result.append("Fizz")
+        elif i // 5 * 5 == i:
+            result.append("Buzz")
+        else:
+            result.append(str(i))
+        i += 1
+    return result
+
+
+print(fizzbuzz(15))
+
+
+pass
 
 # You can test your function with print statements below
 # Example:
